@@ -20,7 +20,6 @@ for(let contador = 1 ; contador <= 30; contador++){
     }
 }
 
-
 // Numeros aleatórios de 1 a 50, criando um contador que só é incrementado caso os números NÃO sejam divisíveis por 5
 
 let contagem = 0;
