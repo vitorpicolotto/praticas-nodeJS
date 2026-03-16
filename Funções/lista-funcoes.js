@@ -43,6 +43,23 @@ let verificarParidade = (valorNumero) => {
 verificarParidade(6);
 verificarParidade(7);
 
+// 5 - Criar uma função que envie uma mensagem personalizada para o usuário após o processamento do pedido, de acordo com o tipo de cliente. A função deve receber três parâmetros: nome, tipo de cliente (vip, novo ou comum), e a função callback
 
+function mensagemPersonalizada(nome, nivelCliente){
+    if(nivelCliente === 'vip'){
+        console.log(`Agradecemos a sua preferência, ${nome}! Você ganhou frete grátis!!`)
+    } else if (nivelCliente === 'novo'){
+        console.log(`Seja bem-vindo ao sistema, ${nome}! Aproveite seu cupom de adesão!!`);
+    } else {
+        console.log(`Obrigado por comprar com a gente, ${nome}!`);
+    }
+}
 
+function processaPedido(nome, nivelCliente, callback){
+    console.log(`Processando pedido de ${nome}...`);
+    callback(nome, nivelCliente);
+}
 
+processaPedido('Vitor', 'vip', mensagemPersonalizada);
+processaPedido('Renato', 'novo', mensagemPersonalizada);
+processaPedido('André', 'comum', mensagemPersonalizada);
